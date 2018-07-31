@@ -10,9 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.jess.arms.base.BaseFragment;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.utils.ArmsUtils;
+import com.jess.arms.utils.Preconditions;
 
 import ${componentPackageName}.Dagger${pageName}Component;
 import ${moudlePackageName}.${pageName}Module;
@@ -20,9 +22,6 @@ import ${contractPackageName}.${pageName}Contract;
 import ${presenterPackageName}.${pageName}Presenter;
 
 import ${packageName}.R;
-
-import static com.jess.arms.utils.Preconditions.checkNotNull;
-
 
 public class ${pageName}Fragment extends BaseFragment<${pageName}Presenter> implements ${pageName}Contract.View{
 
@@ -33,7 +32,7 @@ public class ${pageName}Fragment extends BaseFragment<${pageName}Presenter> impl
 
     @Override
     public void setupFragmentComponent(@NonNull AppComponent appComponent) {
-        Dagger${pageName}Component //如找不到该类,请编译一下项目
+        Dagger${pageName}Component
                 .builder()
                 .appComponent(appComponent)
                 .${extractLetters(pageName[0]?lower_case)}${pageName?substring(1,pageName?length)}Module(new ${pageName}Module(this))
@@ -104,13 +103,13 @@ public class ${pageName}Fragment extends BaseFragment<${pageName}Presenter> impl
 
     @Override
     public void showMessage(@NonNull String message) {
-        checkNotNull(message);
-        ArmsUtils.snackbarText(message);
+        Preconditions.checkNotNull(message);
+        ToastUtils.showLong(message);
     }
 
     @Override
     public void launchActivity(@NonNull Intent intent) {
-        checkNotNull(intent);
+        Preconditions.checkNotNull(intent);
         ArmsUtils.startActivity(intent);
     }
 

@@ -11,7 +11,7 @@ import ${ativityPackageName}.${pageName}Activity;
 import ${fragmentPackageName}.${pageName}Fragment;
 <#elseif needActivity>
 import com.jess.arms.di.scope.ActivityScope;
-import ${ativityPackageName}.${pageName}Activity;   
+import ${ativityPackageName}.${pageName}Activity;
 <#elseif needFragment>
 import com.jess.arms.di.scope.FragmentScope;
 import ${fragmentPackageName}.${pageName}Fragment;

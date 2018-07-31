@@ -2,8 +2,8 @@
 	package="${packageName}">
 
     <application>
-        <activity android:name="${ativityPackageName}.${activityClass}"
-            >
-        </activity>
+        <activity
+            android:name="${ativityPackageName}.${activityClass}"
+            android:screenOrientation="portrait"/>
     </application>
 </manifest>

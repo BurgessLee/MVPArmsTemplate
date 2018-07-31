@@ -16,7 +16,6 @@ import javax.inject.Inject;
 
 import ${contractPackageName}.${pageName}Contract;
 
-
 <#if needActivity && needFragment>
 @ActivityScope
 <#elseif needActivity>
@@ -24,21 +23,25 @@ import ${contractPackageName}.${pageName}Contract;
 <#elseif needFragment>
 @FragmentScope
 </#if>
-public class ${pageName}Model extends BaseModel implements ${pageName}Contract.Model{
+public class ${pageName}Model extends BaseModel implements ${pageName}Contract.Model {
+
     @Inject
     Gson mGson;
+
     @Inject
     Application mApplication;
 
     @Inject
     public ${pageName}Model(IRepositoryManager repositoryManager) {
         super(repositoryManager);
+        
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        this.mGson = null;
-        this.mApplication = null;
+
+        mGson = null;
+        mApplication = null;
     }
 }
