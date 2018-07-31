@@ -21,7 +21,7 @@ import ${moudlePackageName}.${pageName}Module;
 import ${contractPackageName}.${pageName}Contract;
 import ${presenterPackageName}.${pageName}Presenter;
 
-import ${packageName}.R;
+import com.comjia.kanjiaestate.R;
 
 public class ${pageName}Fragment extends BaseFragment<${pageName}Presenter> implements ${pageName}Contract.View{
 
