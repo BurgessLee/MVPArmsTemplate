@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import me.jessyan.art.base.BaseFragment
 import me.jessyan.art.base.delegate.IFragment
 import me.jessyan.art.mvp.IView
 import me.jessyan.art.mvp.Message
@@ -18,10 +17,11 @@ import me.jessyan.art.utils.ArtUtils
 import ${packageName}${presenterPackageName}.${presenterName}
 </#if>
 
-import ${packageName}.R
+import com.comjia.kanjiaestate.app.base.AppBasicFragment
+import com.comjia.kanjiaestate.R
 
 
-class ${pageName}Fragment : BaseFragment <#if presenterName?has_content><${presenterName}></#if>() , IView {
+class ${pageName}Fragment : AppBasicFragment <#if presenterName?has_content><${presenterName}></#if>() , IView {
 
     companion object {
         fun newInstance():${pageName}Fragment {

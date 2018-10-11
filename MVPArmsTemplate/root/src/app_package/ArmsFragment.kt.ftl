@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import com.jess.arms.base.BaseFragment
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.utils.ArmsUtils
 
@@ -17,8 +16,8 @@ import ${moudlePackageName}.${pageName}Module
 import ${contractPackageName}.${pageName}Contract
 import ${presenterPackageName}.${pageName}Presenter
 
-import ${packageName}.R
-
+import com.comjia.kanjiaestate.app.base.AppBasicFragment
+import com.comjia.kanjiaestate.R
 
 /**
  * 如果没presenter
@@ -33,7 +32,7 @@ import ${packageName}.R
  * }
  * }
  */
-class ${pageName}Fragment : BaseFragment<${pageName}Presenter>() , ${pageName}Contract.View{
+class ${pageName}Fragment : AppBasicFragment<${pageName}Presenter>() , ${pageName}Contract.View{
     companion object {
     fun newInstance():${pageName}Fragment {
         val fragment = ${pageName}Fragment()

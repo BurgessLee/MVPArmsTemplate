@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.blankj.utilcode.util.ToastUtils;
-import com.jess.arms.base.BaseActivity;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.utils.ArmsUtils;
 import com.jess.arms.utils.Preconditions;
@@ -16,9 +15,10 @@ import ${moudlePackageName}.${pageName}Module;
 import ${contractPackageName}.${pageName}Contract;
 import ${presenterPackageName}.${pageName}Presenter;
 
+import com.comjia.kanjiaestate.app.base.AppBasicActivity;
 import com.comjia.kanjiaestate.R;
 
-public class ${pageName}Activity extends BaseActivity<${pageName}Presenter> implements ${pageName}Contract.View {
+public class ${pageName}Activity extends AppBasicActivity<${pageName}Presenter> implements ${pageName}Contract.View {
 
     @Override
     public void setupActivityComponent(@NonNull AppComponent appComponent) {

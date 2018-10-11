@@ -3,7 +3,6 @@ package ${ativityPackageName}
 import android.content.Intent
 import android.os.Bundle
 
-import com.jess.arms.base.BaseActivity
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.utils.ArmsUtils
 
@@ -12,8 +11,8 @@ import ${moudlePackageName}.${pageName}Module
 import ${contractPackageName}.${pageName}Contract
 import ${presenterPackageName}.${pageName}Presenter
 
-import ${packageName}.R
-
+import com.comjia.kanjiaestate.app.base.AppBasicActivity
+import com.comjia.kanjiaestate.R
 
 
 /**
@@ -29,7 +28,7 @@ import ${packageName}.R
  * }
  * }
  */
-class ${pageName}Activity : BaseActivity<${pageName}Presenter>() , ${pageName}Contract.View {
+class ${pageName}Activity : AppBasicActivity<${pageName}Presenter>() , ${pageName}Contract.View {
 
     override fun setupActivityComponent(appComponent:AppComponent) {
         Dagger${pageName}Component //如找不到该类,请编译一下项目

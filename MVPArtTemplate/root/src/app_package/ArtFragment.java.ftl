@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import me.jessyan.art.base.BaseFragment;
 import me.jessyan.art.base.delegate.IFragment;
 import me.jessyan.art.mvp.IView;
 import me.jessyan.art.mvp.Message;
@@ -21,10 +20,11 @@ import static me.jessyan.art.utils.Preconditions.checkNotNull;
 import ${packageName}${presenterPackageName}.${presenterName};
 </#if>
 
-import ${packageName}.R;
+import com.comjia.kanjiaestate.app.base.AppBasicFragment;
+import com.comjia.kanjiaestate.R;
 
 
-public class ${pageName}Fragment extends BaseFragment <#if presenterName?has_content><${presenterName}></#if> implements IView {
+public class ${pageName}Fragment extends AppBasicFragment <#if presenterName?has_content><${presenterName}></#if> implements IView {
 
     public static ${pageName}Fragment newInstance() {
         ${pageName}Fragment fragment = new ${pageName}Fragment();

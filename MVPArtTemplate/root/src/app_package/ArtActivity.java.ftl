@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import me.jessyan.art.base.BaseActivity;
 import me.jessyan.art.mvp.IView;
 import me.jessyan.art.mvp.Message;
 import me.jessyan.art.utils.ArtUtils;
@@ -15,10 +14,11 @@ import static me.jessyan.art.utils.Preconditions.checkNotNull;
 import ${packageName}${presenterPackageName}.${presenterName};
 </#if>
 
-import ${packageName}.R;
+import com.comjia.kanjiaestate.app.base.AppBasicActivity;
+import com.comjia.kanjiaestate.R;
 
 
-public class ${pageName}Activity extends BaseActivity <#if presenterName?has_content><${presenterName}></#if> implements IView {
+public class ${pageName}Activity extends AppBasicActivity <#if presenterName?has_content><${presenterName}></#if> implements IView {
 
     @Override
     public int initView(@Nullable Bundle savedInstanceState) {
