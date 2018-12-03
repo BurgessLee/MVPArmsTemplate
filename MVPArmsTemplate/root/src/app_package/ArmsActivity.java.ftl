@@ -15,10 +15,10 @@ import ${moudlePackageName}.${pageName}Module;
 import ${contractPackageName}.${pageName}Contract;
 import ${presenterPackageName}.${pageName}Presenter;
 
-import com.comjia.kanjiaestate.app.base.AppBasicActivity;
+import com.comjia.kanjiaestate.app.base.AppSupportActivity;
 import com.comjia.kanjiaestate.R;
 
-public class ${pageName}Activity extends AppBasicActivity<${pageName}Presenter> implements ${pageName}Contract.View {
+public class ${pageName}Activity extends AppSupportActivity<${pageName}Presenter> implements ${pageName}Contract.View {
 
     @Override
     public void setupActivityComponent(@NonNull AppComponent appComponent) {

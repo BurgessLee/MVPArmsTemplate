@@ -20,10 +20,10 @@ import ${moudlePackageName}.${pageName}Module;
 import ${contractPackageName}.${pageName}Contract;
 import ${presenterPackageName}.${pageName}Presenter;
 
-import com.comjia.kanjiaestate.app.base.AppBasicFragment;
+import com.comjia.kanjiaestate.app.base.AppSupportFragment;
 import com.comjia.kanjiaestate.R;
 
-public class ${pageName}Fragment extends AppBasicFragment<${pageName}Presenter> implements ${pageName}Contract.View{
+public class ${pageName}Fragment extends AppSupportFragment<${pageName}Presenter> implements ${pageName}Contract.View{
 
     public static ${pageName}Fragment newInstance() {
         ${pageName}Fragment fragment = new ${pageName}Fragment();
